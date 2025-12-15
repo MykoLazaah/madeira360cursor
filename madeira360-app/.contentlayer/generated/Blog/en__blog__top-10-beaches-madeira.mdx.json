@@ -1,0 +1,28 @@
+{
+  "title": "Top 10 beaches in Madeira you should know",
+  "description": "The best beaches & swim spots — with access tips and best times",
+  "date": "2025-12-05T00:00:00.000Z",
+  "lang": "en",
+  "slug": "top-10-beaches-madeira",
+  "tags": [
+    "beaches",
+    "swimming",
+    "madeira"
+  ],
+  "category": "Beaches",
+  "body": {
+    "raw": "\n# Top 10 beaches in Madeira\n\nShort intro…\n\n<TourCard title=\"Airport transfer (easy)\" price={35} currency=\"EUR\" href=\"/en\" tags={[\"transfer\", \"airport\"]} />\n",
+    "code": "var Component=(()=>{var p=Object.create;var o=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,b=Object.prototype.hasOwnProperty;var l=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),g=(t,e)=>{for(var r in e)o(t,r,{get:e[r],enumerable:!0})},i=(t,e,r,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of u(e))!b.call(t,a)&&a!==r&&o(t,a,{get:()=>e[a],enumerable:!(s=m(e,a))||s.enumerable});return t};var x=(t,e,r)=>(r=t!=null?p(f(t)):{},i(e||!t||!t.__esModule?o(r,\"default\",{value:t,enumerable:!0}):r,t)),j=t=>i(o({},\"__esModule\",{value:!0}),t);var d=l((E,c)=>{c.exports=_jsx_runtime});var T={};g(T,{default:()=>y,frontmatter:()=>_});var n=x(d()),_={title:\"Top 10 beaches in Madeira you should know\",description:\"The best beaches & swim spots \\u2014 with access tips and best times\",date:\"2025-12-05\",lang:\"en\",slug:\"top-10-beaches-madeira\",tags:[\"beaches\",\"swimming\",\"madeira\"],category:\"Beaches\"};function h(t){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},t.components),{TourCard:r}=e;return r||M(\"TourCard\",!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(e.h1,{id:\"top-10-beaches-in-madeira\",children:(0,n.jsx)(e.a,{href:\"#top-10-beaches-in-madeira\",children:\"Top 10 beaches in Madeira\"})}),`\n`,(0,n.jsx)(e.p,{children:\"Short intro\\u2026\"}),`\n`,(0,n.jsx)(r,{title:\"Airport transfer (easy)\",price:35,currency:\"EUR\",href:\"/en\",tags:[\"transfer\",\"airport\"]})]})}function w(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,Object.assign({},t,{children:(0,n.jsx)(h,t)})):h(t)}var y=w;function M(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return j(T);})();\n;return Component;"
+  },
+  "_id": "en/blog/top-10-beaches-madeira.mdx",
+  "_raw": {
+    "sourceFilePath": "en/blog/top-10-beaches-madeira.mdx",
+    "sourceFileName": "top-10-beaches-madeira.mdx",
+    "sourceFileDir": "en/blog",
+    "contentType": "mdx",
+    "flattenedPath": "en/blog/top-10-beaches-madeira"
+  },
+  "type": "Blog",
+  "readingTime": 1,
+  "url": "/en/blog/top-10-beaches-madeira"
+}

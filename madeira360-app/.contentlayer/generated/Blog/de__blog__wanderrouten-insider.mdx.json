@@ -1,0 +1,28 @@
+{
+  "title": "Die besten Wanderrouten auf Madeira — Insider-Tipps",
+  "description": "Von Pico do Arieiro bis Levada Walks: Was sich wirklich lohnt",
+  "date": "2025-12-08T00:00:00.000Z",
+  "lang": "de",
+  "slug": "beste-wanderrouten-madeira",
+  "tags": [
+    "wandern",
+    "levada",
+    "berge"
+  ],
+  "category": "Wandern",
+  "body": {
+    "raw": "\n# Die besten Wanderrouten auf Madeira\n\n<Callout variant=\"warning\">Checke vor jeder Tour Wetter und Sperrungen (PRs können geschlossen sein).</Callout>\n\nInhalt folgt…\n",
+    "code": "var Component=(()=>{var l=Object.create;var o=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,m=Object.prototype.hasOwnProperty;var p=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),b=(n,e)=>{for(var t in e)o(n,t,{get:e[t],enumerable:!0})},s=(n,e,t,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of f(e))!m.call(n,a)&&a!==t&&o(n,a,{get:()=>e[a],enumerable:!(i=h(e,a))||i.enumerable});return n};var x=(n,e,t)=>(t=n!=null?l(g(n)):{},s(e||!n||!n.__esModule?o(t,\"default\",{value:n,enumerable:!0}):t,n)),j=n=>s(o({},\"__esModule\",{value:!0}),n);var c=p((C,d)=>{d.exports=_jsx_runtime});var k={};b(k,{default:()=>M,frontmatter:()=>w});var r=x(c()),w={title:\"Die besten Wanderrouten auf Madeira \\u2014 Insider-Tipps\",description:\"Von Pico do Arieiro bis Levada Walks: Was sich wirklich lohnt\",date:\"2025-12-08\",lang:\"de\",slug:\"beste-wanderrouten-madeira\",tags:[\"wandern\",\"levada\",\"berge\"],category:\"Wandern\"};function u(n){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},n.components),{Callout:t}=e;return t||W(\"Callout\",!0),(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(e.h1,{id:\"die-besten-wanderrouten-auf-madeira\",children:(0,r.jsx)(e.a,{href:\"#die-besten-wanderrouten-auf-madeira\",children:\"Die besten Wanderrouten auf Madeira\"})}),`\n`,(0,r.jsx)(t,{variant:\"warning\",children:\"Checke vor jeder Tour Wetter und Sperrungen (PRs k\\xF6nnen geschlossen sein).\"}),`\n`,(0,r.jsx)(e.p,{children:\"Inhalt folgt\\u2026\"})]})}function _(n={}){let{wrapper:e}=n.components||{};return e?(0,r.jsx)(e,Object.assign({},n,{children:(0,r.jsx)(u,n)})):u(n)}var M=_;function W(n,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+n+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return j(k);})();\n;return Component;"
+  },
+  "_id": "de/blog/wanderrouten-insider.mdx",
+  "_raw": {
+    "sourceFilePath": "de/blog/wanderrouten-insider.mdx",
+    "sourceFileName": "wanderrouten-insider.mdx",
+    "sourceFileDir": "de/blog",
+    "contentType": "mdx",
+    "flattenedPath": "de/blog/wanderrouten-insider"
+  },
+  "type": "Blog",
+  "readingTime": 1,
+  "url": "/de/blog/beste-wanderrouten-madeira"
+}
