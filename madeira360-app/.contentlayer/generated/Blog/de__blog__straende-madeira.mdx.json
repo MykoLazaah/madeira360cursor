@@ -1,0 +1,28 @@
+{
+  "title": "Top 10 Strände auf Madeira, die du kennen musst",
+  "description": "Die schönsten Strände & Badestellen — inkl. Tipps für Anfahrt und beste Uhrzeit",
+  "date": "2025-12-05T00:00:00.000Z",
+  "lang": "de",
+  "slug": "top-10-straende-madeira",
+  "tags": [
+    "strände",
+    "baden",
+    "madeira"
+  ],
+  "category": "Strände",
+  "body": {
+    "raw": "\n# Top 10 Strände auf Madeira\n\nKurze Einleitung…\n\n<TourCard title=\"Flughafentransfer (bequem)\" price={35} currency=\"EUR\" href=\"/de\" tags={[\"transfer\", \"airport\"]} />\n",
+    "code": "var Component=(()=>{var f=Object.create;var o=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var l=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var g=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),x=(t,e)=>{for(var n in e)o(t,n,{get:e[n],enumerable:!0})},s=(t,e,n,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of m(e))!h.call(t,a)&&a!==n&&o(t,a,{get:()=>e[a],enumerable:!(i=p(e,a))||i.enumerable});return t};var j=(t,e,n)=>(n=t!=null?f(l(t)):{},s(e||!t||!t.__esModule?o(n,\"default\",{value:t,enumerable:!0}):n,t)),_=t=>s(o({},\"__esModule\",{value:!0}),t);var c=g((S,d)=>{d.exports=_jsx_runtime});var C={};x(C,{default:()=>y,frontmatter:()=>b});var r=j(c()),b={title:\"Top 10 Str\\xE4nde auf Madeira, die du kennen musst\",description:\"Die sch\\xF6nsten Str\\xE4nde & Badestellen \\u2014 inkl. Tipps f\\xFCr Anfahrt und beste Uhrzeit\",date:\"2025-12-05\",lang:\"de\",slug:\"top-10-straende-madeira\",tags:[\"str\\xE4nde\",\"baden\",\"madeira\"],category:\"Str\\xE4nde\"};function u(t){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},t.components),{TourCard:n}=e;return n||T(\"TourCard\",!0),(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(e.h1,{id:\"top-10-str\\xE4nde-auf-madeira\",children:(0,r.jsx)(e.a,{href:\"#top-10-str\\xE4nde-auf-madeira\",children:\"Top 10 Str\\xE4nde auf Madeira\"})}),`\n`,(0,r.jsx)(e.p,{children:\"Kurze Einleitung\\u2026\"}),`\n`,(0,r.jsx)(n,{title:\"Flughafentransfer (bequem)\",price:35,currency:\"EUR\",href:\"/de\",tags:[\"transfer\",\"airport\"]})]})}function M(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(u,t)})):u(t)}var y=M;function T(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return _(C);})();\n;return Component;"
+  },
+  "_id": "de/blog/straende-madeira.mdx",
+  "_raw": {
+    "sourceFilePath": "de/blog/straende-madeira.mdx",
+    "sourceFileName": "straende-madeira.mdx",
+    "sourceFileDir": "de/blog",
+    "contentType": "mdx",
+    "flattenedPath": "de/blog/straende-madeira"
+  },
+  "type": "Blog",
+  "readingTime": 1,
+  "url": "/de/blog/top-10-straende-madeira"
+}

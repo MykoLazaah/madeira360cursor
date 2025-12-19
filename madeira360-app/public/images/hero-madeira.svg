@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E6E4D"/>
+      <stop offset="0.6" stop-color="#111827"/>
+      <stop offset="1" stop-color="#E94E3D"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#F4C98B" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#F4C98B" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <path d="M0 720 C 240 660, 340 780, 560 740 C 820 690, 920 820, 1200 760 C 1350 725, 1480 760, 1600 800 L1600 900 L0 900 Z" fill="url(#sand)"/>
+  <g fill="#ffffff" fill-opacity="0.85">
+    <text x="80" y="140" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="28" letter-spacing="0.12em">
+      MADEIRA360
+    </text>
+    <text x="80" y="210" font-family="Playfair Display, ui-serif, Georgia, Cambria, Times New Roman, Times, serif" font-size="64" font-weight="700">
+      Placeholder Hero Image
+    </text>
+    <text x="80" y="260" font-family="Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif" font-size="22" fill-opacity="0.75">
+      Replace with a real photo when ready
+    </text>
+  </g>
+</svg>

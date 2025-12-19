@@ -1,0 +1,170 @@
+[
+  {
+    "title": "Top 10 Strände auf Madeira, die du kennen musst",
+    "description": "Die schönsten Strände & Badestellen — inkl. Tipps für Anfahrt und beste Uhrzeit",
+    "date": "2025-12-05T00:00:00.000Z",
+    "lang": "de",
+    "slug": "top-10-straende-madeira",
+    "tags": [
+      "strände",
+      "baden",
+      "madeira"
+    ],
+    "category": "Strände",
+    "body": {
+      "raw": "\n# Top 10 Strände auf Madeira\n\nKurze Einleitung…\n\n<TourCard title=\"Flughafentransfer (bequem)\" price={35} currency=\"EUR\" href=\"/de\" tags={[\"transfer\", \"airport\"]} />\n",
+      "code": "var Component=(()=>{var f=Object.create;var o=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var l=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var g=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),x=(t,e)=>{for(var n in e)o(t,n,{get:e[n],enumerable:!0})},s=(t,e,n,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of m(e))!h.call(t,a)&&a!==n&&o(t,a,{get:()=>e[a],enumerable:!(i=p(e,a))||i.enumerable});return t};var j=(t,e,n)=>(n=t!=null?f(l(t)):{},s(e||!t||!t.__esModule?o(n,\"default\",{value:t,enumerable:!0}):n,t)),_=t=>s(o({},\"__esModule\",{value:!0}),t);var c=g((S,d)=>{d.exports=_jsx_runtime});var C={};x(C,{default:()=>y,frontmatter:()=>b});var r=j(c()),b={title:\"Top 10 Str\\xE4nde auf Madeira, die du kennen musst\",description:\"Die sch\\xF6nsten Str\\xE4nde & Badestellen \\u2014 inkl. Tipps f\\xFCr Anfahrt und beste Uhrzeit\",date:\"2025-12-05\",lang:\"de\",slug:\"top-10-straende-madeira\",tags:[\"str\\xE4nde\",\"baden\",\"madeira\"],category:\"Str\\xE4nde\"};function u(t){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},t.components),{TourCard:n}=e;return n||T(\"TourCard\",!0),(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(e.h1,{id:\"top-10-str\\xE4nde-auf-madeira\",children:(0,r.jsx)(e.a,{href:\"#top-10-str\\xE4nde-auf-madeira\",children:\"Top 10 Str\\xE4nde auf Madeira\"})}),`\n`,(0,r.jsx)(e.p,{children:\"Kurze Einleitung\\u2026\"}),`\n`,(0,r.jsx)(n,{title:\"Flughafentransfer (bequem)\",price:35,currency:\"EUR\",href:\"/de\",tags:[\"transfer\",\"airport\"]})]})}function M(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(u,t)})):u(t)}var y=M;function T(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return _(C);})();\n;return Component;"
+    },
+    "_id": "de/blog/straende-madeira.mdx",
+    "_raw": {
+      "sourceFilePath": "de/blog/straende-madeira.mdx",
+      "sourceFileName": "straende-madeira.mdx",
+      "sourceFileDir": "de/blog",
+      "contentType": "mdx",
+      "flattenedPath": "de/blog/straende-madeira"
+    },
+    "type": "Blog",
+    "readingTime": 1,
+    "url": "/de/blog/top-10-straende-madeira"
+  },
+  {
+    "title": "Die besten Wanderrouten auf Madeira — Insider-Tipps",
+    "description": "Von Pico do Arieiro bis Levada Walks: Was sich wirklich lohnt",
+    "date": "2025-12-08T00:00:00.000Z",
+    "lang": "de",
+    "slug": "beste-wanderrouten-madeira",
+    "tags": [
+      "wandern",
+      "levada",
+      "berge"
+    ],
+    "category": "Wandern",
+    "body": {
+      "raw": "\n# Die besten Wanderrouten auf Madeira\n\n<Callout variant=\"warning\">Checke vor jeder Tour Wetter und Sperrungen (PRs können geschlossen sein).</Callout>\n\nInhalt folgt…\n",
+      "code": "var Component=(()=>{var l=Object.create;var o=Object.defineProperty;var h=Object.getOwnPropertyDescriptor;var f=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,m=Object.prototype.hasOwnProperty;var p=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),b=(n,e)=>{for(var t in e)o(n,t,{get:e[t],enumerable:!0})},s=(n,e,t,i)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of f(e))!m.call(n,a)&&a!==t&&o(n,a,{get:()=>e[a],enumerable:!(i=h(e,a))||i.enumerable});return n};var x=(n,e,t)=>(t=n!=null?l(g(n)):{},s(e||!n||!n.__esModule?o(t,\"default\",{value:n,enumerable:!0}):t,n)),j=n=>s(o({},\"__esModule\",{value:!0}),n);var c=p((C,d)=>{d.exports=_jsx_runtime});var k={};b(k,{default:()=>M,frontmatter:()=>w});var r=x(c()),w={title:\"Die besten Wanderrouten auf Madeira \\u2014 Insider-Tipps\",description:\"Von Pico do Arieiro bis Levada Walks: Was sich wirklich lohnt\",date:\"2025-12-08\",lang:\"de\",slug:\"beste-wanderrouten-madeira\",tags:[\"wandern\",\"levada\",\"berge\"],category:\"Wandern\"};function u(n){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},n.components),{Callout:t}=e;return t||W(\"Callout\",!0),(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(e.h1,{id:\"die-besten-wanderrouten-auf-madeira\",children:(0,r.jsx)(e.a,{href:\"#die-besten-wanderrouten-auf-madeira\",children:\"Die besten Wanderrouten auf Madeira\"})}),`\n`,(0,r.jsx)(t,{variant:\"warning\",children:\"Checke vor jeder Tour Wetter und Sperrungen (PRs k\\xF6nnen geschlossen sein).\"}),`\n`,(0,r.jsx)(e.p,{children:\"Inhalt folgt\\u2026\"})]})}function _(n={}){let{wrapper:e}=n.components||{};return e?(0,r.jsx)(e,Object.assign({},n,{children:(0,r.jsx)(u,n)})):u(n)}var M=_;function W(n,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+n+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return j(k);})();\n;return Component;"
+    },
+    "_id": "de/blog/wanderrouten-insider.mdx",
+    "_raw": {
+      "sourceFilePath": "de/blog/wanderrouten-insider.mdx",
+      "sourceFileName": "wanderrouten-insider.mdx",
+      "sourceFileDir": "de/blog",
+      "contentType": "mdx",
+      "flattenedPath": "de/blog/wanderrouten-insider"
+    },
+    "type": "Blog",
+    "readingTime": 1,
+    "url": "/de/blog/beste-wanderrouten-madeira"
+  },
+  {
+    "title": "Willkommen auf Madeira360",
+    "description": "Dein Reiseführer für Madeira — Tipps und lokale Angebote",
+    "date": "2025-12-01T00:00:00.000Z",
+    "lang": "de",
+    "slug": "willkommen",
+    "tags": [
+      "madeira",
+      "reise",
+      "de"
+    ],
+    "cover": "/images/hero-madeira.svg",
+    "body": {
+      "raw": "\n<Callout>Kurzer wichtiger Hinweis: Diese Seite ist ein Starter-Projekt und wird laufend erweitert.</Callout>\n\n# Willkommen auf Madeira360\n\nMadeira360 ist dein kompakter Guide für Madeira: Routen, Spots, Transfers und lokale Angebote.\n\n<CTA title=\"Kostenlosen Mini-Guide erhalten\" description=\"1–2 Mails pro Woche. Kein Spam.\" href=\"/de\" buttonText=\"Per Email abonnieren\" />\n",
+      "code": "var Component=(()=>{var u=Object.create;var a=Object.defineProperty;var f=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var h=Object.getPrototypeOf,g=Object.prototype.hasOwnProperty;var x=(n,e)=>()=>(e||n((e={exports:{}}).exports,e),e.exports),k=(n,e)=>{for(var i in e)a(n,i,{get:e[i],enumerable:!0})},s=(n,e,i,r)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of p(e))!g.call(n,o)&&o!==i&&a(n,o,{get:()=>e[o],enumerable:!(r=f(e,o))||r.enumerable});return n};var M=(n,e,i)=>(i=n!=null?u(h(n)):{},s(e||!n||!n.__esModule?a(i,\"default\",{value:n,enumerable:!0}):i,n)),w=n=>s(a({},\"__esModule\",{value:!0}),n);var l=x((A,d)=>{d.exports=_jsx_runtime});var C={};k(C,{default:()=>_,frontmatter:()=>j});var t=M(l()),j={title:\"Willkommen auf Madeira360\",description:\"Dein Reisef\\xFChrer f\\xFCr Madeira \\u2014 Tipps und lokale Angebote\",date:\"2025-12-01\",lang:\"de\",slug:\"willkommen\",tags:[\"madeira\",\"reise\",\"de\"],cover:\"/images/hero-madeira.svg\"};function m(n){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},n.components),{Callout:i,CTA:r}=e;return r||c(\"CTA\",!0),i||c(\"Callout\",!0),(0,t.jsxs)(t.Fragment,{children:[(0,t.jsx)(i,{children:\"Kurzer wichtiger Hinweis: Diese Seite ist ein Starter-Projekt und wird laufend erweitert.\"}),`\n`,(0,t.jsx)(e.h1,{id:\"willkommen-auf-madeira360\",children:(0,t.jsx)(e.a,{href:\"#willkommen-auf-madeira360\",children:\"Willkommen auf Madeira360\"})}),`\n`,(0,t.jsx)(e.p,{children:\"Madeira360 ist dein kompakter Guide f\\xFCr Madeira: Routen, Spots, Transfers und lokale Angebote.\"}),`\n`,(0,t.jsx)(r,{title:\"Kostenlosen Mini-Guide erhalten\",description:\"1\\u20132 Mails pro Woche. Kein Spam.\",href:\"/de\",buttonText:\"Per Email abonnieren\"})]})}function b(n={}){let{wrapper:e}=n.components||{};return e?(0,t.jsx)(e,Object.assign({},n,{children:(0,t.jsx)(m,n)})):m(n)}var _=b;function c(n,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+n+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return w(C);})();\n;return Component;"
+    },
+    "_id": "de/blog/welcome.mdx",
+    "_raw": {
+      "sourceFilePath": "de/blog/welcome.mdx",
+      "sourceFileName": "welcome.mdx",
+      "sourceFileDir": "de/blog",
+      "contentType": "mdx",
+      "flattenedPath": "de/blog/welcome"
+    },
+    "type": "Blog",
+    "readingTime": 1,
+    "url": "/de/blog/willkommen"
+  },
+  {
+    "title": "Best hikes in Madeira — insider tips",
+    "description": "From Pico do Arieiro to Levada walks: what’s actually worth it",
+    "date": "2025-12-08T00:00:00.000Z",
+    "lang": "en",
+    "slug": "best-hikes-madeira",
+    "tags": [
+      "hiking",
+      "levada",
+      "mountains"
+    ],
+    "category": "Hiking",
+    "body": {
+      "raw": "\n# Best hikes in Madeira\n\n<Callout variant=\"warning\">Always check weather and closures before you go (some PR trails can be closed).</Callout>\n\nMore soon…\n",
+      "code": "var Component=(()=>{var h=Object.create;var r=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,p=Object.prototype.hasOwnProperty;var f=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),x=(t,e)=>{for(var n in e)r(t,n,{get:e[n],enumerable:!0})},s=(t,e,n,a)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let o of u(e))!p.call(t,o)&&o!==n&&r(t,o,{get:()=>e[o],enumerable:!(a=m(e,o))||a.enumerable});return t};var k=(t,e,n)=>(n=t!=null?h(g(t)):{},s(e||!t||!t.__esModule?r(n,\"default\",{value:t,enumerable:!0}):n,t)),b=t=>s(r({},\"__esModule\",{value:!0}),t);var d=f((C,c)=>{c.exports=_jsx_runtime});var M={};x(M,{default:()=>_,frontmatter:()=>w});var i=k(d()),w={title:\"Best hikes in Madeira \\u2014 insider tips\",description:\"From Pico do Arieiro to Levada walks: what\\u2019s actually worth it\",date:\"2025-12-08\",lang:\"en\",slug:\"best-hikes-madeira\",tags:[\"hiking\",\"levada\",\"mountains\"],category:\"Hiking\"};function l(t){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},t.components),{Callout:n}=e;return n||y(\"Callout\",!0),(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(e.h1,{id:\"best-hikes-in-madeira\",children:(0,i.jsx)(e.a,{href:\"#best-hikes-in-madeira\",children:\"Best hikes in Madeira\"})}),`\n`,(0,i.jsx)(n,{variant:\"warning\",children:\"Always check weather and closures before you go (some PR trails can be closed).\"}),`\n`,(0,i.jsx)(e.p,{children:\"More soon\\u2026\"})]})}function j(t={}){let{wrapper:e}=t.components||{};return e?(0,i.jsx)(e,Object.assign({},t,{children:(0,i.jsx)(l,t)})):l(t)}var _=j;function y(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return b(M);})();\n;return Component;"
+    },
+    "_id": "en/blog/best-hikes-insider-tips.mdx",
+    "_raw": {
+      "sourceFilePath": "en/blog/best-hikes-insider-tips.mdx",
+      "sourceFileName": "best-hikes-insider-tips.mdx",
+      "sourceFileDir": "en/blog",
+      "contentType": "mdx",
+      "flattenedPath": "en/blog/best-hikes-insider-tips"
+    },
+    "type": "Blog",
+    "readingTime": 1,
+    "url": "/en/blog/best-hikes-madeira"
+  },
+  {
+    "title": "Top 10 beaches in Madeira you should know",
+    "description": "The best beaches & swim spots — with access tips and best times",
+    "date": "2025-12-05T00:00:00.000Z",
+    "lang": "en",
+    "slug": "top-10-beaches-madeira",
+    "tags": [
+      "beaches",
+      "swimming",
+      "madeira"
+    ],
+    "category": "Beaches",
+    "body": {
+      "raw": "\n# Top 10 beaches in Madeira\n\nShort intro…\n\n<TourCard title=\"Airport transfer (easy)\" price={35} currency=\"EUR\" href=\"/en\" tags={[\"transfer\", \"airport\"]} />\n",
+      "code": "var Component=(()=>{var p=Object.create;var o=Object.defineProperty;var m=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,b=Object.prototype.hasOwnProperty;var l=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),g=(t,e)=>{for(var r in e)o(t,r,{get:e[r],enumerable:!0})},i=(t,e,r,s)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of u(e))!b.call(t,a)&&a!==r&&o(t,a,{get:()=>e[a],enumerable:!(s=m(e,a))||s.enumerable});return t};var x=(t,e,r)=>(r=t!=null?p(f(t)):{},i(e||!t||!t.__esModule?o(r,\"default\",{value:t,enumerable:!0}):r,t)),j=t=>i(o({},\"__esModule\",{value:!0}),t);var d=l((E,c)=>{c.exports=_jsx_runtime});var T={};g(T,{default:()=>y,frontmatter:()=>_});var n=x(d()),_={title:\"Top 10 beaches in Madeira you should know\",description:\"The best beaches & swim spots \\u2014 with access tips and best times\",date:\"2025-12-05\",lang:\"en\",slug:\"top-10-beaches-madeira\",tags:[\"beaches\",\"swimming\",\"madeira\"],category:\"Beaches\"};function h(t){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},t.components),{TourCard:r}=e;return r||M(\"TourCard\",!0),(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(e.h1,{id:\"top-10-beaches-in-madeira\",children:(0,n.jsx)(e.a,{href:\"#top-10-beaches-in-madeira\",children:\"Top 10 beaches in Madeira\"})}),`\n`,(0,n.jsx)(e.p,{children:\"Short intro\\u2026\"}),`\n`,(0,n.jsx)(r,{title:\"Airport transfer (easy)\",price:35,currency:\"EUR\",href:\"/en\",tags:[\"transfer\",\"airport\"]})]})}function w(t={}){let{wrapper:e}=t.components||{};return e?(0,n.jsx)(e,Object.assign({},t,{children:(0,n.jsx)(h,t)})):h(t)}var y=w;function M(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return j(T);})();\n;return Component;"
+    },
+    "_id": "en/blog/top-10-beaches-madeira.mdx",
+    "_raw": {
+      "sourceFilePath": "en/blog/top-10-beaches-madeira.mdx",
+      "sourceFileName": "top-10-beaches-madeira.mdx",
+      "sourceFileDir": "en/blog",
+      "contentType": "mdx",
+      "flattenedPath": "en/blog/top-10-beaches-madeira"
+    },
+    "type": "Blog",
+    "readingTime": 1,
+    "url": "/en/blog/top-10-beaches-madeira"
+  },
+  {
+    "title": "Welcome to Madeira360",
+    "description": "Your Madeira guide — tips and local offers",
+    "date": "2025-12-01T00:00:00.000Z",
+    "lang": "en",
+    "slug": "welcome",
+    "tags": [
+      "madeira",
+      "travel",
+      "en"
+    ],
+    "cover": "/images/hero-madeira.svg",
+    "body": {
+      "raw": "\n<Callout>This is a starter project. Content and offers will grow over time.</Callout>\n\n# Welcome to Madeira360\n\nMadeira360 is your compact guide for Madeira: routes, spots, transfers, and local offers.\n\n<CTA title=\"Get the free mini guide\" description=\"1–2 emails per week. No spam.\" href=\"/en\" buttonText=\"Subscribe\" />\n",
+      "code": "var Component=(()=>{var f=Object.create;var i=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var x=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{for(var o in e)i(t,o,{get:e[o],enumerable:!0})},s=(t,e,o,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of p(e))!h.call(t,a)&&a!==o&&i(t,a,{get:()=>e[a],enumerable:!(n=u(e,a))||n.enumerable});return t};var w=(t,e,o)=>(o=t!=null?f(g(t)):{},s(e||!t||!t.__esModule?i(o,\"default\",{value:t,enumerable:!0}):o,t)),M=t=>s(i({},\"__esModule\",{value:!0}),t);var d=x((T,c)=>{c.exports=_jsx_runtime});var v={};j(v,{default:()=>C,frontmatter:()=>_});var r=w(d()),_={title:\"Welcome to Madeira360\",description:\"Your Madeira guide \\u2014 tips and local offers\",date:\"2025-12-01\",lang:\"en\",slug:\"welcome\",tags:[\"madeira\",\"travel\",\"en\"],cover:\"/images/hero-madeira.svg\"};function l(t){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},t.components),{Callout:o,CTA:n}=e;return n||m(\"CTA\",!0),o||m(\"Callout\",!0),(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(o,{children:\"This is a starter project. Content and offers will grow over time.\"}),`\n`,(0,r.jsx)(e.h1,{id:\"welcome-to-madeira360\",children:(0,r.jsx)(e.a,{href:\"#welcome-to-madeira360\",children:\"Welcome to Madeira360\"})}),`\n`,(0,r.jsx)(e.p,{children:\"Madeira360 is your compact guide for Madeira: routes, spots, transfers, and local offers.\"}),`\n`,(0,r.jsx)(n,{title:\"Get the free mini guide\",description:\"1\\u20132 emails per week. No spam.\",href:\"/en\",buttonText:\"Subscribe\"})]})}function b(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(l,t)})):l(t)}var C=b;function m(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return M(v);})();\n;return Component;"
+    },
+    "_id": "en/blog/welcome.mdx",
+    "_raw": {
+      "sourceFilePath": "en/blog/welcome.mdx",
+      "sourceFileName": "welcome.mdx",
+      "sourceFileDir": "en/blog",
+      "contentType": "mdx",
+      "flattenedPath": "en/blog/welcome"
+    },
+    "type": "Blog",
+    "readingTime": 1,
+    "url": "/en/blog/welcome"
+  }
+]

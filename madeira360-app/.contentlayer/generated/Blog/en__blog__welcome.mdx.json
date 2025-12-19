@@ -1,0 +1,28 @@
+{
+  "title": "Welcome to Madeira360",
+  "description": "Your Madeira guide — tips and local offers",
+  "date": "2025-12-01T00:00:00.000Z",
+  "lang": "en",
+  "slug": "welcome",
+  "tags": [
+    "madeira",
+    "travel",
+    "en"
+  ],
+  "cover": "/images/hero-madeira.svg",
+  "body": {
+    "raw": "\n<Callout>This is a starter project. Content and offers will grow over time.</Callout>\n\n# Welcome to Madeira360\n\nMadeira360 is your compact guide for Madeira: routes, spots, transfers, and local offers.\n\n<CTA title=\"Get the free mini guide\" description=\"1–2 emails per week. No spam.\" href=\"/en\" buttonText=\"Subscribe\" />\n",
+    "code": "var Component=(()=>{var f=Object.create;var i=Object.defineProperty;var u=Object.getOwnPropertyDescriptor;var p=Object.getOwnPropertyNames;var g=Object.getPrototypeOf,h=Object.prototype.hasOwnProperty;var x=(t,e)=>()=>(e||t((e={exports:{}}).exports,e),e.exports),j=(t,e)=>{for(var o in e)i(t,o,{get:e[o],enumerable:!0})},s=(t,e,o,n)=>{if(e&&typeof e==\"object\"||typeof e==\"function\")for(let a of p(e))!h.call(t,a)&&a!==o&&i(t,a,{get:()=>e[a],enumerable:!(n=u(e,a))||n.enumerable});return t};var w=(t,e,o)=>(o=t!=null?f(g(t)):{},s(e||!t||!t.__esModule?i(o,\"default\",{value:t,enumerable:!0}):o,t)),M=t=>s(i({},\"__esModule\",{value:!0}),t);var d=x((T,c)=>{c.exports=_jsx_runtime});var v={};j(v,{default:()=>C,frontmatter:()=>_});var r=w(d()),_={title:\"Welcome to Madeira360\",description:\"Your Madeira guide \\u2014 tips and local offers\",date:\"2025-12-01\",lang:\"en\",slug:\"welcome\",tags:[\"madeira\",\"travel\",\"en\"],cover:\"/images/hero-madeira.svg\"};function l(t){let e=Object.assign({h1:\"h1\",a:\"a\",p:\"p\"},t.components),{Callout:o,CTA:n}=e;return n||m(\"CTA\",!0),o||m(\"Callout\",!0),(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(o,{children:\"This is a starter project. Content and offers will grow over time.\"}),`\n`,(0,r.jsx)(e.h1,{id:\"welcome-to-madeira360\",children:(0,r.jsx)(e.a,{href:\"#welcome-to-madeira360\",children:\"Welcome to Madeira360\"})}),`\n`,(0,r.jsx)(e.p,{children:\"Madeira360 is your compact guide for Madeira: routes, spots, transfers, and local offers.\"}),`\n`,(0,r.jsx)(n,{title:\"Get the free mini guide\",description:\"1\\u20132 emails per week. No spam.\",href:\"/en\",buttonText:\"Subscribe\"})]})}function b(t={}){let{wrapper:e}=t.components||{};return e?(0,r.jsx)(e,Object.assign({},t,{children:(0,r.jsx)(l,t)})):l(t)}var C=b;function m(t,e){throw new Error(\"Expected \"+(e?\"component\":\"object\")+\" `\"+t+\"` to be defined: you likely forgot to import, pass, or provide it.\")}return M(v);})();\n;return Component;"
+  },
+  "_id": "en/blog/welcome.mdx",
+  "_raw": {
+    "sourceFilePath": "en/blog/welcome.mdx",
+    "sourceFileName": "welcome.mdx",
+    "sourceFileDir": "en/blog",
+    "contentType": "mdx",
+    "flattenedPath": "en/blog/welcome"
+  },
+  "type": "Blog",
+  "readingTime": 1,
+  "url": "/en/blog/welcome"
+}
