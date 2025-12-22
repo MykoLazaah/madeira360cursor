@@ -22,7 +22,7 @@ export default function OffersPage({
     place: lang === 'de' ? 'Madeira, Portugal' : 'Madeira, Portugal',
     amount: i % 3 === 0 ? '€49' : i % 3 === 1 ? '€89' : '€129',
     tagText: i % 4 === 0 ? (lang === 'de' ? 'Top' : 'Top') : undefined,
-    image: '/images/hero-madeira.svg',
+    image: '/images/hero-madeira.webp',
   }))
 
   const totalPages = Math.max(1, Math.ceil(offers.length / PAGE_SIZE))
@@ -33,7 +33,7 @@ export default function OffersPage({
     <>
       <section
         className="relative table w-full items-center py-36 bg-top bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url('/images/hero-madeira.svg')" }}
+        style={{ backgroundImage: "url('/images/hero-madeira.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900" />
         <div className="container relative">

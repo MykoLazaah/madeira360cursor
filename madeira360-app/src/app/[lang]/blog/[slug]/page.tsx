@@ -79,7 +79,7 @@ export default function BlogPost({ params }: { params: { lang: string; slug: str
       {/* Blog post header (copied structure from template, content is dynamic; no map, no comments) */}
       <section
         className="relative table w-full items-center py-36 bg-top bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url('/images/hero-madeira.svg')" }}
+        style={{ backgroundImage: "url('/images/hero-madeira.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900" />
         <div className="container relative">
@@ -123,7 +123,7 @@ export default function BlogPost({ params }: { params: { lang: string; slug: str
           <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
             <div className="lg:col-span-8 md:col-span-7">
               <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                <img src={post.cover ?? '/images/hero-madeira.svg'} alt="" className="w-full h-[420px] object-cover" />
+                <img src={post.cover ?? '/images/hero-madeira.webp'} alt="" className="w-full h-[420px] object-cover" />
                 <div className="p-6">
                   <p className="text-slate-400 mb-5">{post.description}</p>
                   <div className="prose prose-zinc max-w-none dark:prose-invert">

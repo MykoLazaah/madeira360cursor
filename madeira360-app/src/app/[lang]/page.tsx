@@ -15,7 +15,7 @@ export default function Landing({ params }: { params: { lang: string } }) {
     id: `tour-${i + 1}`,
     title: lang === 'de' ? `Tour Paket ${i + 1}` : `Tour Package ${i + 1}`,
     location: lang === 'de' ? 'Madeira, Portugal' : 'Madeira, Portugal',
-    image: '/images/hero-madeira.svg',
+    image: '/images/hero-madeira.webp',
     price: i % 2 === 0 ? '$99' : '$129',
     tag: i % 3 === 0 ? (lang === 'de' ? 'Neu' : 'New') : undefined,
   }))
@@ -27,7 +27,7 @@ export default function Landing({ params }: { params: { lang: string } }) {
         className="relative py-36  bg-cover jarallax"
         data-jarallax
         data-speed="0.5"
-        style={{ backgroundImage: "url('/images/hero-madeira.svg')", backgroundPosition: 'top' }}
+        style={{ backgroundImage: "url('/images/hero-madeira.webp')", backgroundPosition: 'top' }}
       >
         <div className="absolute inset-0 bg-slate-900/40" />
 
@@ -67,7 +67,7 @@ export default function Landing({ params }: { params: { lang: string } }) {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="bg-white dark:bg-slate-900 rounded-xl shadow dark:shadow-gray-800 p-6 z-10 relative lg:ms-10">
+              <div className="bg-white dark:bg-slate-900 rounded-xl shadow dark:shadow-gray-800 p-6 z-10 relative">
                 <h4 className="mb-5 text-2xl font-semibold font-heading">
                   {lang === 'de' ? 'Suche (Platzhalter)' : 'Search (placeholder)'}
                 </h4>
@@ -126,17 +126,6 @@ export default function Landing({ params }: { params: { lang: string } }) {
                 </form>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="relative">
-          <div className="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden text-white dark:text-slate-900">
-            <svg className="w-full h-auto scale-[2.0] origin-top" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"
-                fill="currentColor"
-              />
-            </svg>
           </div>
         </div>
       </section>
@@ -207,7 +196,7 @@ export default function Landing({ params }: { params: { lang: string } }) {
               <div key={post._id} className="group relative overflow-hidden">
                 <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
                   <img
-                    src={post.cover ?? '/images/hero-madeira.svg'}
+                    src={post.cover ?? '/images/hero-madeira.webp'}
                     className="w-full h-56 object-cover group-hover:scale-110 group-hover:rotate-3 duration-500"
                     alt=""
                   />

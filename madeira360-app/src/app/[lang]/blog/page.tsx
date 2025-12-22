@@ -30,7 +30,7 @@ export default function BlogIndex({
     <>
       <section
         className="relative table w-full items-center py-36 bg-top bg-no-repeat bg-cover"
-        style={{ backgroundImage: "url('/images/hero-madeira.svg')" }}
+        style={{ backgroundImage: "url('/images/hero-madeira.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900" />
         <div className="container relative">
@@ -60,7 +60,7 @@ export default function BlogIndex({
               <div key={post._id} className="group relative overflow-hidden">
                 <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
                   <img
-                    src={post.cover ?? '/images/hero-madeira.svg'}
+                    src={post.cover ?? '/images/hero-madeira.webp'}
                     className="w-full h-56 object-cover group-hover:scale-110 group-hover:rotate-3 duration-500"
                     alt=""
                   />
