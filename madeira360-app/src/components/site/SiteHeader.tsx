@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
 
 type Props = {
@@ -13,8 +14,15 @@ export function SiteHeader({ lang }: Props) {
     >
       <div className="container relative">
         <div className="flex items-center justify-between py-4">
-          <Link href={`/${lang}`} className="text-lg font-semibold tracking-tight font-heading">
-            Madeira360
+          <Link href={`/${lang}`} className="flex items-center">
+            <Image
+              src="/images/logo-madeira360.svg"
+              alt="Madeira360"
+              width={200}
+              height={50}
+              priority
+              className="h-10 w-auto"
+            />
           </Link>
 
           <div className="flex items-center gap-6 text-sm">

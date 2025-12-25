@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   title: 'Madeira360',
   description: 'Madeira travel tips and local offers (DE/EN)',
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+  icons: {
+    icon: '/images/logo-madeira360.svg',
+    shortcut: '/images/logo-madeira360.svg',
+    apple: '/images/logo-madeira360.svg',
+  },
 }
 
 export default function RootLayout({
