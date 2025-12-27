@@ -159,13 +159,13 @@ export default function Landing({ params }: { params: { lang: string } }) {
                 </div>
 
                 <div className="p-4">
-                  <Link href={`/${lang}/offers`} className="text-lg font-medium hover:text-primary duration-500 ease-in-out font-heading">
+                  <Link href={`/${lang}/tour/${t.id}`} className="text-lg font-medium hover:text-primary duration-500 ease-in-out font-heading">
                     {t.title}
                   </Link>
                   <p className="text-slate-400 mt-1">{t.location}</p>
                   <div className="mt-3 flex items-center justify-between">
                     <span className="text-slate-900 dark:text-white font-semibold">{t.price}</span>
-                    <Link href={`/${lang}/offers`} className="hover:text-primary inline-flex items-center">
+                    <Link href={`/${lang}/tour/${t.id}`} className="hover:text-primary inline-flex items-center">
                       {lang === 'de' ? 'Details' : 'Details'}
                       <span className="ms-1">→</span>
                     </Link>

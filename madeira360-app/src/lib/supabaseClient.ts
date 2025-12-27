@@ -25,10 +25,18 @@ export async function getOffers() {
 }
 
 export async function getOfferById(id: string) {
-  const supabase = getSupabaseAnon()
-  const { data, error } = await supabase.from('offers').select('*').eq('id', id).maybeSingle()
-  if (error) throw error
-  return data
+  try {
+    const supabase = getSupabaseAnon()
+    const { data, error } = await supabase.from('offers').select('*').eq('id', id).maybeSingle()
+    if (error) throw error
+    return data
+  } catch (error) {
+    // If Supabase is not configured, return null to allow fallback to mock data
+    if (error instanceof Error && error.message.includes('Missing NEXT_PUBLIC_SUPABASE')) {
+      return null
+    }
+    throw error
+  }
 }
 
 export async function insertClick(input: {

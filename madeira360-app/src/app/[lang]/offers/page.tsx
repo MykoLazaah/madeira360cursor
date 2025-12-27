@@ -138,7 +138,7 @@ export default function OffersPage({
                     <div className="p-4">
                       <p className="flex items-center text-slate-400 font-medium mb-2">{o.place}</p>
                       <Link
-                        href={`/${lang}/offers`}
+                        href={`/${lang}/tour/${o.id}`}
                         className="text-lg font-medium hover:text-primary duration-500 ease-in-out font-heading"
                       >
                         {o.title}
@@ -146,7 +146,7 @@ export default function OffersPage({
 
                       <div className="mt-4 pt-4 flex justify-between items-center border-t border-slate-100 dark:border-gray-800">
                         <h5 className="text-lg font-medium text-primary">{o.amount}</h5>
-                        <Link href={`/${lang}/offers`} className="text-slate-400 hover:text-primary">
+                        <Link href={`/${lang}/tour/${o.id}`} className="text-slate-400 hover:text-primary">
                           {lang === 'de' ? 'Mehr' : 'Explore Now'} <span className="ms-1">→</span>
                         </Link>
                       </div>

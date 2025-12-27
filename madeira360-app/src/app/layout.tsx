@@ -1,16 +1,18 @@
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
-import { Inter, Playfair_Display } from 'next/font/google'
+import { Crimson_Text, Montserrat } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({
+const crimsonText = Crimson_Text({
   variable: '--font-body',
   subsets: ['latin'],
+  weight: '400',
 })
 
-const playfair = Playfair_Display({
+const montserrat = Montserrat({
   variable: '--font-display',
   subsets: ['latin'],
+  weight: '600',
 })
 
 export const metadata: Metadata = {
@@ -33,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${inter.variable} ${playfair.variable} antialiased`}
+        className={`${crimsonText.variable} ${montserrat.variable} antialiased`}
       >
         {children}
       </body>
