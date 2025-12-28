@@ -60,26 +60,49 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 400;
 }
 
-/* Montserrat SemiBold для H1-H2 */
+/* Fraunces Semibold для H1 */
 h1,
-h2,
-.font-heading h1,
-.font-heading h2 {
-  font-family: var(--font-display), ui-sans-serif, system-ui, -apple-system, sans-serif;
+.font-heading h1 {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 600;
 }
 
-/* Для остальных заголовков и элементов с классом font-heading */
+/* Fraunces Medium для H2-H3 */
+h2,
 h3,
+.font-heading h2,
+.font-heading h3 {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+/* Fraunces Medium для H4-H5 */
 h4,
 h5,
-.font-heading h3,
 .font-heading h4,
-.font-heading h5,
+.font-heading h5 {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+/* Для остальных элементов с классом font-heading */
 .font-heading {
-  font-family: var(--font-display), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Open Sans Semibold для UI элементов и кнопок */
+button,
+input,
+select,
+textarea,
+[role="button"],
+.btn,
+.button {
+  font-family: var(--font-body), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
 }
 
 /* Container padding for horizontal spacing */

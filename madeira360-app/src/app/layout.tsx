@@ -1,18 +1,18 @@
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
-import { Crimson_Text, Montserrat } from 'next/font/google'
+import { Open_Sans, Fraunces } from 'next/font/google'
 import './globals.css'
 
-const crimsonText = Crimson_Text({
+const openSans = Open_Sans({
   variable: '--font-body',
   subsets: ['latin'],
   weight: '400',
 })
 
-const montserrat = Montserrat({
+const fraunces = Fraunces({
   variable: '--font-display',
   subsets: ['latin'],
-  weight: '600',
+  weight: ['500', '600'],
 })
 
 export const metadata: Metadata = {
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang={lang}>
       <body
-        className={`${crimsonText.variable} ${montserrat.variable} antialiased`}
+        className={`${openSans.variable} ${fraunces.variable} antialiased`}
       >
         {children}
       </body>
