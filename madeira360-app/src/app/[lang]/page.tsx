@@ -208,15 +208,6 @@ export default function Landing({ params }: { params: { lang: string } }) {
                 </div>
 
                 <div className="mt-6">
-                  <div className="flex mb-4">
-                    <span className="flex items-center text-slate-400 text-sm">
-                      {post.readingTime} min read
-                    </span>
-                    <span className="text-slate-400 text-sm ms-3">
-                      {new Date(post.date).toLocaleDateString(lang)}
-                    </span>
-                  </div>
-
                   <Link href={post.url} className="text-lg font-medium hover:text-primary duration-500 ease-in-out font-heading">
                     {post.title}
                   </Link>
