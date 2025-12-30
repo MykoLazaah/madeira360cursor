@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { type Locale } from '@/lib/i18n'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 export function Nav({ lang }: { lang: Locale }) {
   return (
@@ -12,15 +13,7 @@ export function Nav({ lang }: { lang: Locale }) {
           <Link href={`/${lang}/blog`} className="text-muted-foreground hover:text-foreground">
             Blog
           </Link>
-          <div className="flex items-center gap-2">
-            <Link href={`/de${lang === 'de' ? '' : ''}`} className={lang === 'de' ? 'font-semibold' : 'text-muted-foreground'}>
-              DE
-            </Link>
-            <span className="text-muted-foreground">/</span>
-            <Link href={`/en${lang === 'en' ? '' : ''}`} className={lang === 'en' ? 'font-semibold' : 'text-muted-foreground'}>
-              EN
-            </Link>
-          </div>
+          <LanguageSwitcher lang={lang} />
         </nav>
       </div>
     </header>

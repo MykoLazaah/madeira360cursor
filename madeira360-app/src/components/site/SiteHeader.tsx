@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
+import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 
 type Props = {
   lang: Locale
@@ -36,21 +37,7 @@ export function SiteHeader({ lang }: Props) {
               Offers
             </Link>
 
-            <div className="flex items-center gap-2">
-              <Link
-                href="/de"
-                className={lang === 'de' ? 'font-semibold text-primary' : 'text-muted-foreground hover:text-foreground'}
-              >
-                DE
-              </Link>
-              <span className="text-muted-foreground">/</span>
-              <Link
-                href="/en"
-                className={lang === 'en' ? 'font-semibold text-primary' : 'text-muted-foreground hover:text-foreground'}
-              >
-                EN
-              </Link>
-            </div>
+            <LanguageSwitcher lang={lang} />
           </div>
         </div>
       </div>
