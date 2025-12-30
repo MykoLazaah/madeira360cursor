@@ -1,5 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { type Locale } from '@/lib/i18n'
+import { NewsletterForm } from '@/components/NewsletterForm'
 
 type Props = {
   lang: Locale
@@ -14,13 +16,31 @@ export function SiteFooter({ lang }: Props) {
             <div className="py-[60px] px-0">
               <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
                 <div className="lg:col-span-4 md:col-span-12">
-                  <Link href={`/${lang}`} className="text-[22px] focus:outline-none font-heading">
-                    Madeira360
+                  <Link href={`/${lang}`} className="inline-block focus:outline-none">
+                    <Image
+                      src="/images/logo-madeira360.svg"
+                      alt="Madeira360"
+                      width={200}
+                      height={50}
+                      className="h-10 w-auto max-w-[200px]"
+                    />
                   </Link>
                   <p className="mt-6 text-gray-300">
-                    {lang === 'de'
-                      ? 'Platzhaltertext: kurze Beschreibung des Projekts.'
-                      : 'Placeholder: short description of the project.'}
+                    {lang === 'de' ? (
+                      <>
+                        <Link href={`/${lang}`} className="text-white hover:underline">
+                          Madeira360.online
+                        </Link>{' '}
+                        ist eine Reiseplattform über Madeira mit Guides, Tipps und ausgewählten Erlebnissen für Reisende und Entdecker.
+                      </>
+                    ) : (
+                      <>
+                        <Link href={`/${lang}`} className="text-white hover:underline">
+                          Madeira360.online
+                        </Link>{' '}
+                        is a travel platform about Madeira, offering guides, tips, and curated experiences for travelers and explorers.
+                      </>
+                    )}
                   </p>
                 </div>
 
@@ -57,11 +77,15 @@ export function SiteFooter({ lang }: Props) {
                 <div className="lg:col-span-4 md:col-span-6">
                   <div className="lg:ms-8">
                     <h5 className="tracking-[1px] text-gray-100 font-semibold">
-                      {lang === 'de' ? 'Kontakt' : 'Contact'}
+                      {lang === 'de' ? 'Newsletter' : 'Newsletter'}
                     </h5>
-                    <div className="mt-6 space-y-2 text-gray-300">
-                      <div>contact@example.com</div>
-                      <div>+000 000 000</div>
+                    <p className="mt-6 text-gray-300 text-sm mb-4">
+                      {lang === 'de'
+                        ? 'Seltene Mails. Nur das, was zählt.'
+                        : 'Occasional emails. Only what matters.'}
+                    </p>
+                    <div className="text-left">
+                      <NewsletterForm lang={lang} />
                     </div>
                   </div>
                 </div>
@@ -75,7 +99,12 @@ export function SiteFooter({ lang }: Props) {
         <div className="container relative text-center">
           <div className="grid grid-cols-1">
             <div className="text-center">
-              <p className="mb-0">© {new Date().getFullYear()} Madeira360</p>
+              <p className="mb-0">
+                © {new Date().getFullYear()}{' '}
+                <Link href={`/${lang}`} className="text-white hover:underline">
+                  Madeira360.online
+                </Link>
+              </p>
             </div>
           </div>
         </div>

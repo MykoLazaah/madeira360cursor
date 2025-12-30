@@ -26,6 +26,8 @@ Copy `.env.example` to `.env.local` and fill:
 - **NEXT_PUBLIC_SUPABASE_URL**: Supabase project URL
 - **NEXT_PUBLIC_SUPABASE_ANON_KEY**: anon key
 - **SUPABASE_SERVICE_ROLE_KEY**: service role key (server-only; required for inserts into `clicks`/`leads`)
+- **MAILERLITE_API_TOKEN**: MailerLite API token (required for newsletter subscriptions via `/api/newsletter`)
+- **MAILERLITE_GROUP_ID**: (optional) MailerLite group ID where subscribers will be added
 
 ### Routes
 
