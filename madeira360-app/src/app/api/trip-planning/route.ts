@@ -12,9 +12,11 @@ export async function POST(req: Request) {
   try {
     const body = (await req.json()) as {
       email?: string
-      lang?: string
+      travel_date_1?: string | null
+      travel_date_2?: string | null
+      interests?: string | null
+      locale?: string
       utm?: Record<string, unknown>
-      payload?: Record<string, unknown>
     }
 
     // Validate email
@@ -26,6 +28,17 @@ export async function POST(req: Request) {
     const email = body.email.trim().toLowerCase()
     if (email.length > 254) {
       return NextResponse.json({ ok: false, error: 'invalid_email' }, { status: 400 })
+    }
+
+    // Validate optional fields length
+    if (body.travel_date_1 && body.travel_date_1.length > 50) {
+      return NextResponse.json({ ok: false, error: 'invalid_input' }, { status: 400 })
+    }
+    if (body.travel_date_2 && body.travel_date_2.length > 50) {
+      return NextResponse.json({ ok: false, error: 'invalid_input' }, { status: 400 })
+    }
+    if (body.interests && body.interests.length > 1000) {
+      return NextResponse.json({ ok: false, error: 'invalid_input' }, { status: 400 })
     }
 
     const apiToken = process.env.MAILERLITE_API_TOKEN
@@ -40,6 +53,15 @@ export async function POST(req: Request) {
     }
 
     // Prepare subscriber data for MailerLite
+    // IMPORTANT: Custom fields must be created in MailerLite dashboard first!
+    // See MAILERLITE_SETUP.md for instructions
+    // Field mapping:
+    // - email → mailerlite.email (system field, always works)
+    // - travel_date_1 → mailerlite.travel_date_1 (custom field, must exist in MailerLite)
+    // - travel_date_2 → mailerlite.travel_date_2 (custom field, must exist in MailerLite)
+    // - interests → mailerlite.interests (custom field, must exist in MailerLite)
+    // - locale → mailerlite.locale (custom field, must exist in MailerLite)
+    // - utm_* → mailerlite.utm_* (custom fields, must exist in MailerLite)
     const subscriberData: {
       email: string
       status?: 'active' | 'unsubscribed' | 'bounced' | 'junk'
@@ -55,11 +77,30 @@ export async function POST(req: Request) {
       subscriberData.groups = [groupId]
     }
 
-    // Add custom fields if needed (language, UTM params, etc.)
+    // Add custom fields according to MailerLite field mapping
     const fields: Record<string, unknown> = {}
-    if (body.lang) {
-      fields.language = body.lang
+    
+    // travel_date_1: Date field, optional (arrival date)
+    if (body.travel_date_1) {
+      fields.travel_date_1 = body.travel_date_1
     }
+
+    // travel_date_2: Date field, optional (departure date)
+    if (body.travel_date_2) {
+      fields.travel_date_2 = body.travel_date_2
+    }
+
+    // interests: Text field, comma-separated, optional
+    if (body.interests) {
+      fields.interests = body.interests
+    }
+
+    // Add locale if provided
+    if (body.locale) {
+      fields.locale = body.locale
+    }
+
+    // Add UTM params if provided
     if (body.utm && Object.keys(body.utm).length > 0) {
       Object.entries(body.utm).forEach(([key, value]) => {
         if (value) {
@@ -67,13 +108,7 @@ export async function POST(req: Request) {
         }
       })
     }
-    if (body.payload) {
-      Object.entries(body.payload).forEach(([key, value]) => {
-        if (value) {
-          fields[key] = value
-        }
-      })
-    }
+
     if (Object.keys(fields).length > 0) {
       subscriberData.fields = fields
     }
@@ -100,9 +135,8 @@ export async function POST(req: Request) {
         attemptedFields: Object.keys(fields),
       })
       
-      // If subscriber already exists, that's okay
+      // If subscriber already exists, try to update instead
       if (mailerLiteResponse.status === 422) {
-        // Try to update existing subscriber instead
         const updateResponse = await fetch(
           `https://connect.mailerlite.com/api/subscribers/${encodeURIComponent(email)}`,
           {
@@ -133,13 +167,12 @@ export async function POST(req: Request) {
 
     return NextResponse.json({ ok: true })
   } catch (error) {
-    console.error('Newsletter subscription error:', error)
+    console.error('Trip planning form submission error:', error)
     return NextResponse.json(
       { ok: false, error: 'server_error' },
       { status: 500 },
     )
   }
 }
-
 
 

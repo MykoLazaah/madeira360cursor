@@ -1,6 +1,7 @@
 import { allBlogs } from 'contentlayer/generated'
 import { isLocale } from '@/lib/i18n'
 import Link from 'next/link'
+import { TripPlanningForm } from '@/components/TripPlanningForm'
 
 export default function Landing({ params }: { params: { lang: string } }) {
   const lang = params.lang
@@ -35,95 +36,21 @@ export default function Landing({ params }: { params: { lang: string } }) {
           <div className="grid lg:grid-cols-12 md:grid-cols-2 mt-10 items-center gap-6">
             <div className="lg:col-span-7">
               <h5 className="text-3xl text-white font-heading">
-                {lang === 'de' ? 'Dein Madeira Guide' : 'Your Madeira Guide'}
+                {lang === 'de' ? 'Persönliche Reiseplanung' : 'Personal trip planning'}
               </h5>
               <h4 className="font-bold text-white lg:leading-normal leading-normal text-4xl lg:text-6xl mb-6 mt-5 font-heading">
-                {lang === 'de' ? (
-                  <>
-                    Wohin geht&apos;s
-                    <br /> als Nächstes?
-                  </>
-                ) : (
-                  <>
-                    Where do you
-                    <br /> want to go?
-                  </>
-                )}
+                {lang === 'de' ? 'Plane deine Madeira-Reise mit Sicherheit' : 'Plan your Madeira trip with confidence'}
               </h4>
               <p className="text-white/70 text-xl max-w-xl">
                 {lang === 'de'
-                  ? 'Platzhaltertext: Blog, Spots, Routen und Angebote.'
-                  : 'Placeholder: blog posts, spots, routes, and offers.'}
+                  ? 'Erhalte praktische Tipps, Wetterinfos und Tour-Empfehlungen passend zu deinen Reisedaten.'
+                  : 'Get practical tips, weather insights and tour ideas tailored to your travel plans.'}
               </p>
-
-              <div className="mt-6">
-                <Link
-                  href={`/${lang}/offers`}
-                  className="py-2 px-5 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary text-white rounded-md"
-                >
-                  {lang === 'de' ? 'Angebote ansehen' : 'View packages'}
-                </Link>
-              </div>
             </div>
 
             <div className="lg:col-span-5">
               <div className="bg-white dark:bg-slate-900 rounded-xl shadow dark:shadow-gray-800 p-6 z-10 relative">
-                <h4 className="mb-5 text-2xl font-semibold font-heading">
-                  {lang === 'de' ? 'Suche (Platzhalter)' : 'Search (placeholder)'}
-                </h4>
-                <form>
-                  <div className="grid grid-cols-1 gap-3">
-                    <div>
-                      <label className="font-medium text-slate-900 dark:text-white">
-                        {lang === 'de' ? 'Suche:' : 'Search:'}
-                      </label>
-                      <div className="relative mt-2">
-                        <input
-                          className="w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
-                          placeholder={lang === 'de' ? 'Suchbegriff' : 'Keyword'}
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="font-medium text-slate-900 dark:text-white">
-                        {lang === 'de' ? 'Datum:' : 'Date:'}
-                      </label>
-                      <div className="relative mt-2">
-                        <input
-                          className="w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0"
-                          placeholder={lang === 'de' ? 'TT.MM.JJJJ' : 'MM/DD/YYYY'}
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="font-medium text-slate-900 dark:text-white">
-                        {lang === 'de' ? 'Personen:' : 'No. of Person:'}
-                      </label>
-                      <div className="relative mt-2">
-                        <select className="w-full py-2 px-3 h-10 bg-transparent dark:bg-slate-900 dark:text-slate-200 rounded-md outline-none border border-gray-100 dark:border-gray-800 focus:ring-0">
-                          <option disabled defaultValue="">
-                            {lang === 'de' ? 'Auswählen' : 'Select'}
-                          </option>
-                          <option>1</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <button
-                        type="button"
-                        className="py-1 px-5 h-10 inline-block tracking-wide align-middle duration-500 text-base text-center bg-primary text-white rounded-md w-full cursor-pointer"
-                      >
-                        {lang === 'de' ? 'Suchen' : 'Search'}
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                <TripPlanningForm lang={lang as 'de' | 'en'} />
               </div>
             </div>
           </div>
