@@ -37,6 +37,13 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${fraunces.variable} antialiased`}
       >
+        {/* GetYourGuide Analytics */}
+        <script
+          async
+          defer
+          src="https://widget.getyourguide.com/dist/pa.umd.production.min.js"
+          data-gyg-partner-id="VC3RVAM"
+        />
         {children}
       </body>
     </html>

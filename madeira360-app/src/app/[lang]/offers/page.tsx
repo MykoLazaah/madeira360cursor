@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { isLocale } from '@/lib/i18n'
+import { GetYourGuideWidget } from '@/components/GetYourGuideWidget'
 
 const PAGE_SIZE = 10
 
@@ -14,6 +15,48 @@ export default function OffersPage({
   const lang = params.lang
   if (!isLocale(lang)) notFound()
 
+  // Show new page with widget for both EN and DE versions
+  const pageTitle = lang === 'de' ? 'Angebote' : 'Offers'
+  const localeCode = lang === 'de' ? 'de-DE' : 'en-US'
+
+  return (
+    <>
+      <section
+        className="relative table w-full items-center py-36 bg-top bg-no-repeat bg-cover"
+        style={{ backgroundImage: "url('/images/hero-madeira.webp')" }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/60 via-slate-900/80 to-slate-900" />
+        <div className="container relative">
+          <div className="grid grid-cols-1 pb-8 text-center mt-10">
+            <h3 className="text-4xl leading-normal tracking-wider font-semibold text-white font-heading">
+              {pageTitle}
+            </h3>
+          </div>
+        </div>
+        <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
+          <ul className="tracking-[0.5px] mb-0 inline-block">
+            <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white">
+              <Link href={`/${lang}`}>Madeira360</Link>
+            </li>
+            <li className="inline-block text-base text-white/50 mx-0.5">›</li>
+            <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">
+              {pageTitle}
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="relative md:py-24 py-16">
+        <div className="container relative">
+          {/* GetYourGuide Widget */}
+          <GetYourGuideWidget localeCode={localeCode} />
+        </div>
+      </section>
+    </>
+  )
+
+  // OLD PAGE CONTENT (hidden, kept for reference)
+  /*
   const page = Math.max(1, Number(searchParams.page ?? '1') || 1)
 
   const offers = Array.from({ length: 22 }).map((_, i) => ({
@@ -59,7 +102,6 @@ export default function OffersPage({
       <section className="relative md:py-24 py-16">
         <div className="container relative">
           <div className="grid md:grid-cols-12 grid-cols-1 gap-6">
-            {/* Left sidebar (copied structure from template; map removed per TZ) */}
             <div className="lg:col-span-4 md:col-span-5">
               <div className="p-4 rounded-md shadow dark:shadow-gray-700 sticky top-20">
                 <div>
@@ -116,12 +158,9 @@ export default function OffersPage({
                     ))}
                   </div>
                 </div>
-
-                {/* Map block removed intentionally */}
               </div>
             </div>
 
-            {/* Offers list */}
             <div className="lg:col-span-8 md:col-span-7">
               <div className="grid lg:grid-cols-2 grid-cols-1 gap-6">
                 {slice.map((o) => (
@@ -218,5 +257,6 @@ export default function OffersPage({
       </section>
     </>
   )
+  */
 }
 
