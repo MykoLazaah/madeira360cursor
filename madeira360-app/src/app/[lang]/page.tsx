@@ -62,45 +62,90 @@ export default function Landing({ params }: { params: { lang: string } }) {
         <div className="container relative md:mt-24 mt-16">
           <div className="grid grid-cols-1 pb-8 text-center">
             <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold font-heading">
-              {lang === 'de' ? 'Tour Pakete' : 'Tours Packages'}
+              {lang === 'de' ? 'Tour Pakete' : 'Tour Packages'}
             </h3>
             <p className="text-slate-400 max-w-xl mx-auto">
               {lang === 'de'
-                ? 'Platzhaltertext: kurze Einleitung für die Tour-Kacheln.'
-                : 'Placeholder: short intro for the tour tiles.'}
+                ? 'Entdecken Sie Madeira: Touren auf Deutsch'
+                : 'Discover Madeira: Tours in English'}
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
-            {tours.map((t) => (
-              <div key={t.id} className="group rounded-md shadow dark:shadow-gray-700">
-                <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-700 mx-2 mt-2 bg-white dark:bg-slate-900">
-                  <img src={t.image} className="w-full h-48 object-cover scale-125 group-hover:scale-100 duration-500" alt="" />
-                  {t.tag ? (
-                    <div className="absolute top-0 start-0 p-4">
-                      <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">
-                        {t.tag}
-                      </span>
-                    </div>
-                  ) : null}
-                </div>
+          {/* Tour cards - Hidden for both DE and EN */}
+          <div className="hidden">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-6 gap-6">
+              {tours.map((t) => (
+                <div key={t.id} className="group rounded-md shadow dark:shadow-gray-700">
+                  <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-700 mx-2 mt-2 bg-white dark:bg-slate-900">
+                    <img src={t.image} className="w-full h-48 object-cover scale-125 group-hover:scale-100 duration-500" alt="" />
+                    {t.tag ? (
+                      <div className="absolute top-0 start-0 p-4">
+                        <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">
+                          {t.tag}
+                        </span>
+                      </div>
+                    ) : null}
+                  </div>
 
-                <div className="p-4">
-                  <Link href={`/${lang}/tour/${t.id}`} className="text-lg font-medium hover:text-primary duration-500 ease-in-out font-heading">
-                    {t.title}
-                  </Link>
-                  <p className="text-slate-400 mt-1">{t.location}</p>
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="text-slate-900 dark:text-white font-semibold">{t.price}</span>
-                    <Link href={`/${lang}/tour/${t.id}`} className="hover:text-primary inline-flex items-center">
-                      {lang === 'de' ? 'Details' : 'Details'}
-                      <span className="ms-1">→</span>
+                  <div className="p-4">
+                    <Link href={`/${lang}/tour/${t.id}`} className="text-lg font-medium hover:text-primary duration-500 ease-in-out font-heading">
+                      {t.title}
                     </Link>
+                    <p className="text-slate-400 mt-1">{t.location}</p>
+                    <div className="mt-3 flex items-center justify-between">
+                      <span className="text-slate-900 dark:text-white font-semibold">{t.price}</span>
+                      <Link href={`/${lang}/tour/${t.id}`} className="hover:text-primary inline-flex items-center">
+                        {lang === 'de' ? 'Details' : 'Details'}
+                        <span className="ms-1">→</span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
+          {/* GetYourGuide Widget - For DE */}
+          {lang === 'de' && (
+            <div className="mt-6">
+              <div
+                data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+                data-gyg-locale-code="de-DE"
+                data-gyg-widget="activities"
+                data-gyg-number-of-items="3"
+                data-gyg-partner-id="VC3RVAM"
+                data-gyg-tour-ids="59626,225105,70346"
+              >
+                <span>
+                  Powered by{' '}
+                  <a target="_blank" rel="sponsored" href="https://www.getyourguide.com/madeira-l67/">
+                    GetYourGuide
+                  </a>
+                </span>
+              </div>
+            </div>
+          )}
+
+          {/* GetYourGuide Widget - For EN */}
+          {lang === 'en' && (
+            <div className="mt-6">
+              <div
+                data-gyg-href="https://widget.getyourguide.com/default/activities.frame"
+                data-gyg-locale-code="en-US"
+                data-gyg-widget="activities"
+                data-gyg-number-of-items="3"
+                data-gyg-partner-id="VC3RVAM"
+                data-gyg-tour-ids="426409,225105,456215"
+              >
+                <span>
+                  Powered by{' '}
+                  <a target="_blank" rel="sponsored" href="https://www.getyourguide.com/madeira-l67/">
+                    GetYourGuide
+                  </a>
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
