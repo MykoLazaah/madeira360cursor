@@ -1,0 +1,35 @@
+В шаблоне мне не нужна точная копия, но надо практически полностью скопировать некоторые блоки (будут указаны в списке блоков).
+
+1) Ссылка на шаблон:
+- URL: https://travosy.vercel.app/index-four
+
+2) Страницы:
+- Home: https://travosy.vercel.app/index-four
+- Blog index: https://travosy.vercel.app/blogs
+- Blog post: https://travosy.vercel.app/blog-detail
+- Offers: https://travosy.vercel.app/list-left-sidebar
+
+
+3) Блоки (порядок сверху вниз):
+- Home: Menu (id=topnav из home), Hero(class=relative py-36  bg-cover jarallax из home), tour packages (из Home), List of Articles (из blog index), Footer (из Home)
+- Blog index: как в шаблоне, данная страница полностью подходит.
+- Blog post: можно полностью скопировать страницу, только убрать блок с картой и комментами.
+- Offers: можно всю страницу "скопировать", только убрать блок с картой.
+
+4) Design tokens:
+- Fonts: Heading:Playfair Display, Body:Inter
+- Primary: 
+Для главных кнопок, ссылки-навигации, CTA:
+#E94E3D — Madeira Coral Red
+- Secondary:
+Для второстепенных кнопок, бордеров, элементов:
+#2E6E4D — Atlantic Green
+- Accent:
+Тёплый, воздушный акцент:
+#F4C98B — Golden Sand
+- Border radius:
+
+
+Rename all classes and components.
+Use placeholder content.
+

@@ -1,0 +1,130 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+
+  --primary: #e94e3d;
+  --primary-foreground: #ffffff;
+
+  --secondary: #2e6e4d;
+  --secondary-foreground: #ffffff;
+
+  --accent: #f4c98b;
+  --accent-foreground: #111827;
+
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+
+  --border: #e5e7eb;
+  --card: #ffffff;
+  --card-foreground: #111827;
+
+  --radius-base: 0.875rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0f14;
+    --foreground: #e5e7eb;
+
+    --muted: #111827;
+    --muted-foreground: #9ca3af;
+
+    --border: #1f2937;
+    --card: #0b0f14;
+    --card-foreground: #e5e7eb;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* Fraunces Semibold для H1 */
+h1,
+.font-heading h1 {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+
+/* Fraunces Medium для H2-H3 */
+h2,
+h3,
+.font-heading h2,
+.font-heading h3 {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+/* Fraunces Medium для H4-H5 */
+h4,
+h5,
+.font-heading h4,
+.font-heading h5 {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 500;
+}
+
+/* Для остальных элементов с классом font-heading */
+.font-heading {
+  font-family: var(--font-display), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Open Sans Semibold для UI элементов и кнопок */
+button,
+input,
+select,
+textarea,
+[role="button"],
+.btn,
+.button {
+  font-family: var(--font-body), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
+}
+
+/* Container padding for horizontal spacing */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1280px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

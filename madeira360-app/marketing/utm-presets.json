@@ -1,0 +1,22 @@
+[
+  {"utm_source":"pinterest","utm_medium":"pin","utm_campaign":"madeira_launch_q1","utm_term":"beaches","utm_content":"pin1"},
+  {"utm_source":"pinterest","utm_medium":"pin","utm_campaign":"madeira_launch_q1","utm_term":"hikes","utm_content":"pin2"},
+  {"utm_source":"pinterest","utm_medium":"pin","utm_campaign":"madeira_launch_q1","utm_term":"itinerary","utm_content":"pin3"},
+  {"utm_source":"tiktok","utm_medium":"video","utm_campaign":"madeira_launch_q1","utm_term":"sunrise","utm_content":"vid1"},
+  {"utm_source":"tiktok","utm_medium":"video","utm_campaign":"madeira_launch_q1","utm_term":"levada","utm_content":"vid2"},
+  {"utm_source":"instagram","utm_medium":"reel","utm_campaign":"madeira_launch_q1","utm_term":"food","utm_content":"reel1"},
+  {"utm_source":"instagram","utm_medium":"reel","utm_campaign":"madeira_launch_q1","utm_term":"family","utm_content":"reel2"},
+  {"utm_source":"google","utm_medium":"cpc","utm_campaign":"madeira_search_q1","utm_term":"madeira transfer","utm_content":"ad1"},
+  {"utm_source":"google","utm_medium":"cpc","utm_campaign":"madeira_search_q1","utm_term":"madeira hikes","utm_content":"ad2"},
+  {"utm_source":"newsletter","utm_medium":"email","utm_campaign":"welcome_series","utm_term":"welcome","utm_content":"email1"},
+  {"utm_source":"newsletter","utm_medium":"email","utm_campaign":"weekly_digest","utm_term":"blog","utm_content":"email2"},
+  {"utm_source":"youtube","utm_medium":"video","utm_campaign":"madeira_launch_q1","utm_term":"guide","utm_content":"yt1"},
+  {"utm_source":"facebook","utm_medium":"post","utm_campaign":"madeira_launch_q1","utm_term":"transport","utm_content":"fb1"},
+  {"utm_source":"reddit","utm_medium":"post","utm_campaign":"madeira_launch_q1","utm_term":"tips","utm_content":"rd1"},
+  {"utm_source":"partner","utm_medium":"referral","utm_campaign":"hotel_partners","utm_term":"funchal","utm_content":"partner1"},
+  {"utm_source":"partner","utm_medium":"referral","utm_campaign":"tour_partners","utm_term":"levada","utm_content":"partner2"},
+  {"utm_source":"qr","utm_medium":"offline","utm_campaign":"madeira_cards","utm_term":"card","utm_content":"qr1"},
+  {"utm_source":"qr","utm_medium":"offline","utm_campaign":"madeira_posters","utm_term":"poster","utm_content":"qr2"},
+  {"utm_source":"direct","utm_medium":"none","utm_campaign":"brand","utm_term":"","utm_content":""},
+  {"utm_source":"blog","utm_medium":"internal","utm_campaign":"related_posts","utm_term":"","utm_content":"widget1"}
+]

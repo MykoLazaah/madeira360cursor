@@ -1,0 +1,16 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- madeira text in red, bold, lowercase -->
+  <text x="0" y="50" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#e94e3d">madeira</text>
+  
+  <!-- 360 with partial circle in dark green -->
+  <g transform="translate(165, 0)">
+    <!-- Partial circle (open at top right) - dark green -->
+    <path d="M 25 25 A 22 22 0 0 1 45 5" stroke="#2e6e4d" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <!-- 360 text in dark green, bold -->
+    <text x="35" y="45" font-family="Arial, sans-serif" font-size="38" font-weight="bold" fill="#2e6e4d" text-anchor="middle">360</text>
+  </g>
+  
+  <!-- .online text in dark green, smaller, positioned below madeira -->
+  <text x="8" y="70" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#2e6e4d">.online</text>
+</svg>
+
