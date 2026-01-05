@@ -92,7 +92,7 @@ export function TourQuestionForm({
       setEmail('')
       setQuestion('')
       setEmailError('')
-    } catch (error) {
+    } catch (_error) {
       setStatus('error')
       setErrorMessage(copy.error)
     }
