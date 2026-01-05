@@ -2,6 +2,7 @@ import { allBlogs } from 'contentlayer/generated'
 import { isLocale } from '@/lib/i18n'
 import Link from 'next/link'
 import { TripPlanningForm } from '@/components/TripPlanningForm'
+import Image from 'next/image'
 
 export default function Landing({ params }: { params: { lang: string } }) {
   const lang = params.lang
@@ -77,7 +78,7 @@ export default function Landing({ params }: { params: { lang: string } }) {
               {tours.map((t) => (
                 <div key={t.id} className="group rounded-md shadow dark:shadow-gray-700">
                   <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-700 mx-2 mt-2 bg-white dark:bg-slate-900">
-                    <img src={t.image} className="w-full h-48 object-cover scale-125 group-hover:scale-100 duration-500" alt="" />
+                    <Image src={t.image} width={400} height={192} className="w-full h-48 object-cover scale-125 group-hover:scale-100 duration-500" alt="" />
                     {t.tag ? (
                       <div className="absolute top-0 start-0 p-4">
                         <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">
@@ -167,8 +168,10 @@ export default function Landing({ params }: { params: { lang: string } }) {
             {latestPosts.map((post) => (
               <div key={post._id} className="group relative overflow-hidden">
                 <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                  <img
+                  <Image
                     src={post.cover ?? '/images/hero-madeira.webp'}
+                    width={400}
+                    height={224}
                     className="w-full h-56 object-cover group-hover:scale-110 group-hover:rotate-3 duration-500"
                     alt=""
                   />

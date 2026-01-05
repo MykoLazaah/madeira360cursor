@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { isLocale } from '@/lib/i18n'
 import { getOfferById } from '@/lib/supabaseClient'
 import { Badge } from '@/components/ui/Badge'
@@ -14,8 +15,34 @@ function absoluteUrl(path: string) {
   return `${base.replace(/\/$/, '')}${path.startsWith('/') ? path : `/${path}`}`
 }
 
+interface TourMeta {
+  description?: string
+  image?: string
+  duration?: string
+  type?: string
+  groupSize?: string
+  difficulty?: string
+  highlights?: string[]
+  included?: string[]
+  excluded?: string[]
+  content?: string
+  faq?: Array<{ question: string; answer: string }>
+}
+
+interface Tour {
+  id: string
+  title?: string | null
+  provider?: string | null
+  price?: number | null
+  currency?: string | null
+  url?: string | null
+  tags?: string[] | null
+  region?: string | null
+  meta?: TourMeta | null
+}
+
 // Mock data generator for when Supabase is not configured
-function getMockTourData(id: string, lang: string) {
+function getMockTourData(id: string, lang: string): Tour {
   const isOffer = id.startsWith('offer-')
   const isTour = id.startsWith('tour-')
   const num = isOffer ? parseInt(id.replace('offer-', '')) : isTour ? parseInt(id.replace('tour-', '')) : 1
@@ -64,9 +91,9 @@ export async function generateMetadata({
   const { lang, id } = params
   if (!isLocale(lang)) return {}
 
-  let tour = await getOfferById(id)
+  let tour: Tour | null = await getOfferById(id)
   if (!tour) {
-    tour = getMockTourData(id, lang) as any
+    tour = getMockTourData(id, lang)
   }
 
   const canonical = absoluteUrl(`/${lang}/tour/${id}`)
@@ -95,10 +122,10 @@ export default async function TourDetail({ params }: { params: { lang: string; i
   const { lang, id } = params
   if (!isLocale(lang)) notFound()
 
-  let tour = await getOfferById(id)
+  let tour: Tour | null = await getOfferById(id)
   // Use mock data if Supabase is not configured or tour not found
   if (!tour) {
-    tour = getMockTourData(id, lang) as any
+    tour = getMockTourData(id, lang)
   }
 
   const tourTitle = tour.title || (lang === 'de' ? 'Tour' : 'Tour')
@@ -148,7 +175,7 @@ export default async function TourDetail({ params }: { params: { lang: string; i
             <div className="lg:col-span-8 md:col-span-7">
               {/* Tour image gallery */}
               <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-700 mb-6">
-                <img src={tourImage} alt={tourTitle} className="w-full h-[400px] object-cover" />
+                <Image src={tourImage} alt={tourTitle} width={1200} height={400} className="w-full h-[400px] object-cover" />
               </div>
 
               {/* Tour description */}

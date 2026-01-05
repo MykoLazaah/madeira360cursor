@@ -7,6 +7,7 @@ import { Callout } from '@/components/mdx/Callout'
 import { CTA } from '@/components/mdx/CTA'
 import { TourCard } from '@/components/mdx/TourCard'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function generateStaticParams() {
   return allBlogs.map((post) => ({ lang: post.lang, slug: post.slug }))
@@ -109,7 +110,7 @@ export default function BlogPost({ params }: { params: { lang: string; slug: str
           <div className="flex justify-center">
             <div className="max-w-4xl w-full">
               <div className="relative overflow-hidden">
-                <img src={post.cover ?? '/images/hero-madeira.webp'} alt="" className="w-full h-[300px] object-cover" />
+                <Image src={post.cover ?? '/images/hero-madeira.webp'} alt="" width={1200} height={300} className="w-full h-[300px] object-cover" />
                 <div className="p-6">
                   <p className="text-slate-400 mb-5">{post.description}</p>
                   <div className="prose prose-zinc max-w-none dark:prose-invert">

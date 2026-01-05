@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { allBlogs } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 import { isLocale } from '@/lib/i18n'
+import Image from 'next/image'
 
 const PAGE_SIZE = 9
 
@@ -59,8 +60,10 @@ export default function BlogIndex({
             {slice.map((post) => (
               <div key={post._id} className="group relative overflow-hidden">
                 <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-800">
-                  <img
+                  <Image
                     src={post.cover ?? '/images/hero-madeira.webp'}
+                    width={400}
+                    height={224}
                     className="w-full h-56 object-cover group-hover:scale-110 group-hover:rotate-3 duration-500"
                     alt=""
                   />

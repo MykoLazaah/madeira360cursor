@@ -3,14 +3,10 @@ import { notFound } from 'next/navigation'
 import { isLocale } from '@/lib/i18n'
 import { GetYourGuideWidget } from '@/components/GetYourGuideWidget'
 
-const PAGE_SIZE = 10
-
 export default function OffersPage({
   params,
-  searchParams,
 }: {
   params: { lang: string }
-  searchParams: { page?: string }
 }) {
   const lang = params.lang
   if (!isLocale(lang)) notFound()
