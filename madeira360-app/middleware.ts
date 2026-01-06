@@ -11,8 +11,12 @@ export function middleware(req: NextRequest) {
     return NextResponse.next()
   }
 
+  // Don't redirect root path here - let the page render with GTM first
+  // The page will handle client-side redirect
   if (pathname === '/' || pathname === '') {
-    return NextResponse.redirect(new URL(`/${DEFAULT_LOCALE}`, req.url))
+    const requestHeaders = new Headers(req.headers)
+    requestHeaders.set('x-lang', DEFAULT_LOCALE)
+    return NextResponse.next({ request: { headers: requestHeaders } })
   }
 
   const first = pathname.split('/')[1]
