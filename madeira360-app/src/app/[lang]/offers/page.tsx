@@ -162,7 +162,7 @@ export default function OffersPage({
                 {slice.map((o) => (
                   <div key={o.id} className="group rounded-md shadow dark:shadow-gray-700">
                     <div className="relative overflow-hidden rounded-t-md shadow dark:shadow-gray-700 mx-3 mt-3 bg-white dark:bg-slate-900">
-                      <img src={o.image} className="w-full h-52 object-cover scale-125 group-hover:scale-100 duration-500" alt="" />
+                      <img src={o.image} className="w-full h-52 object-cover scale-125 group-hover:scale-100 duration-500" alt={o.title} />
                       {o.tagText ? (
                         <div className="absolute top-0 start-0 p-4">
                           <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">{o.tagText}</span>

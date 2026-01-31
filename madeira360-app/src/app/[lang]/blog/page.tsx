@@ -3,6 +3,59 @@ import { allBlogs } from 'contentlayer/generated'
 import { notFound } from 'next/navigation'
 import { isLocale } from '@/lib/i18n'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+function absoluteUrl(path: string) {
+  const base = process.env.NEXT_PUBLIC_SITE_URL
+  if (!base) return path
+  return `${base.replace(/\/$/, '')}${path.startsWith('/') ? path : `/${path}`}`
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: string }
+}): Promise<Metadata> {
+  const { lang } = params
+  if (!isLocale(lang)) return {}
+
+  const title = lang === 'de' 
+    ? 'Blog - Madeira Reisetipps und Artikel'
+    : 'Blog - Madeira Travel Tips and Articles'
+  
+  const description = lang === 'de'
+    ? 'Entdecken Sie die besten Reisetipps, Guides und Artikel über Madeira. Von Wandern bis zu den besten Sehenswürdigkeiten.'
+    : 'Discover the best travel tips, guides and articles about Madeira. From hiking to the best attractions.'
+
+  const canonical = absoluteUrl(`/${lang}/blog`)
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages: {
+        de: absoluteUrl('/de/blog'),
+        en: absoluteUrl('/en/blog'),
+      },
+    },
+    openGraph: {
+      type: 'website',
+      title,
+      description,
+      url: canonical,
+      images: [{ url: absoluteUrl('/images/hero-madeira.webp') }],
+      locale: lang === 'de' ? 'de_DE' : 'en_US',
+      alternateLocale: lang === 'de' ? 'en_US' : 'de_DE',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [absoluteUrl('/images/hero-madeira.webp')],
+    },
+  }
+}
 
 const PAGE_SIZE = 9
 
@@ -65,7 +118,7 @@ export default function BlogIndex({
                     width={400}
                     height={224}
                     className="w-full h-56 object-cover group-hover:scale-110 group-hover:rotate-3 duration-500"
-                    alt=""
+                    alt={post.title}
                   />
                   <div className="absolute top-0 start-0 p-4 opacity-0 group-hover:opacity-100 duration-500">
                     <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">

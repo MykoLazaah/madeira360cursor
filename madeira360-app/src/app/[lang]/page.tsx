@@ -3,6 +3,59 @@ import { isLocale } from '@/lib/i18n'
 import Link from 'next/link'
 import { TripPlanningForm } from '@/components/TripPlanningForm'
 import Image from 'next/image'
+import type { Metadata } from 'next'
+
+function absoluteUrl(path: string) {
+  const base = process.env.NEXT_PUBLIC_SITE_URL
+  if (!base) return path
+  return `${base.replace(/\/$/, '')}${path.startsWith('/') ? path : `/${path}`}`
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { lang: string }
+}): Promise<Metadata> {
+  const { lang } = params
+  if (!isLocale(lang)) return {}
+
+  const title = lang === 'de' 
+    ? 'Madeira360 - Persönliche Reiseplanung für Madeira'
+    : 'Madeira360 - Personal Trip Planning for Madeira'
+  
+  const description = lang === 'de'
+    ? 'Erhalte praktische Tipps, Wetterinfos und Tour-Empfehlungen passend zu deinen Reisedaten. Plane deine Madeira-Reise mit Sicherheit.'
+    : 'Get practical tips, weather insights and tour ideas tailored to your travel plans. Plan your Madeira trip with confidence.'
+
+  const canonical = absoluteUrl(`/${lang}`)
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages: {
+        de: absoluteUrl('/de'),
+        en: absoluteUrl('/en'),
+      },
+    },
+    openGraph: {
+      type: 'website',
+      title,
+      description,
+      url: canonical,
+      images: [{ url: absoluteUrl('/images/hero-madeira.webp') }],
+      locale: lang === 'de' ? 'de_DE' : 'en_US',
+      alternateLocale: lang === 'de' ? 'en_US' : 'de_DE',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [absoluteUrl('/images/hero-madeira.webp')],
+    },
+  }
+}
 
 export default function Landing({ params }: { params: { lang: string } }) {
   const lang = params.lang
@@ -22,8 +75,31 @@ export default function Landing({ params }: { params: { lang: string } }) {
     tag: i % 3 === 0 ? (lang === 'de' ? 'Neu' : 'New') : undefined,
   }))
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TravelAgency',
+    name: 'Madeira360',
+    description: lang === 'de'
+      ? 'Persönliche Reiseplanung für Madeira - Tipps, Wetterinfos und Tour-Empfehlungen'
+      : 'Personal trip planning for Madeira - tips, weather insights and tour recommendations',
+    url: absoluteUrl(`/${lang}`),
+    inLanguage: lang,
+    areaServed: {
+      '@type': 'Place',
+      name: 'Madeira, Portugal',
+    },
+    offers: {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'TouristTrip',
+        name: lang === 'de' ? 'Madeira Reiseplanung' : 'Madeira Trip Planning',
+      },
+    },
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Hero (copied structure from template, content is placeholder) */}
       <section
         className="relative py-36  bg-cover jarallax"
@@ -78,7 +154,7 @@ export default function Landing({ params }: { params: { lang: string } }) {
               {tours.map((t) => (
                 <div key={t.id} className="group rounded-md shadow dark:shadow-gray-700">
                   <div className="relative overflow-hidden rounded-md shadow dark:shadow-gray-700 mx-2 mt-2 bg-white dark:bg-slate-900">
-                    <Image src={t.image} width={400} height={192} className="w-full h-48 object-cover scale-125 group-hover:scale-100 duration-500" alt="" />
+                    <Image src={t.image} width={400} height={192} className="w-full h-48 object-cover scale-125 group-hover:scale-100 duration-500" alt={t.title} />
                     {t.tag ? (
                       <div className="absolute top-0 start-0 p-4">
                         <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">
@@ -173,7 +249,7 @@ export default function Landing({ params }: { params: { lang: string } }) {
                     width={400}
                     height={224}
                     className="w-full h-56 object-cover group-hover:scale-110 group-hover:rotate-3 duration-500"
-                    alt=""
+                    alt={post.title}
                   />
                   <div className="absolute top-0 start-0 p-4 opacity-0 group-hover:opacity-100 duration-500">
                     <span className="bg-primary text-white text-[12px] px-2.5 py-1 font-medium rounded-md h-5">

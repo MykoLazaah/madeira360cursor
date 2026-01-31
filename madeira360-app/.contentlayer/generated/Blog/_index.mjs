@@ -6,5 +6,7 @@ import en__blog__hikingMadeiraLevadaBeginnersMdx from './en__blog__hiking-madeir
 import en__blog__top_10MustVisitMadeiraMdx from './en__blog__top-10-must-visit-madeira.mdx.json' assert { type: 'json' }
 import de__blog__besteReisezeitMadeiraMdx from './de__blog__beste-reisezeit-madeira.mdx.json' assert { type: 'json' }
 import en__blog__bestTimeVisitMadeiraMdx from './en__blog__best-time-visit-madeira.mdx.json' assert { type: 'json' }
+import de__blog__madeiraNaturschwimmbeckenPortoMonizSeixalMdx from './de__blog__madeira-naturschwimmbecken-porto-moniz-seixal.mdx.json' assert { type: 'json' }
+import en__blog__madeiraNaturalPoolsPortoMonizSeixalMdx from './en__blog__madeira-natural-pools-porto-moniz-seixal.mdx.json' assert { type: 'json' }
 
-export const allBlogs = [de__blog__top_10SehenswurdigkeitenMadeiraMdx, de__blog__wandernMadeiraLevadaAnfaengerMdx, en__blog__hikingMadeiraLevadaBeginnersMdx, en__blog__top_10MustVisitMadeiraMdx, de__blog__besteReisezeitMadeiraMdx, en__blog__bestTimeVisitMadeiraMdx]
+export const allBlogs = [de__blog__top_10SehenswurdigkeitenMadeiraMdx, de__blog__wandernMadeiraLevadaAnfaengerMdx, en__blog__hikingMadeiraLevadaBeginnersMdx, en__blog__top_10MustVisitMadeiraMdx, de__blog__besteReisezeitMadeiraMdx, en__blog__bestTimeVisitMadeiraMdx, de__blog__madeiraNaturschwimmbeckenPortoMonizSeixalMdx, en__blog__madeiraNaturalPoolsPortoMonizSeixalMdx]
