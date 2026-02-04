@@ -38,6 +38,6 @@ export default makeSource({
   documentTypes: [Blog],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'wrap' }]],
+    rehypePlugins: [rehypeSlug],
   },
 })

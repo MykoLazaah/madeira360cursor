@@ -6,6 +6,7 @@ import { isLocale } from '@/lib/i18n'
 import { Callout } from '@/components/mdx/Callout'
 import { CTA } from '@/components/mdx/CTA'
 import { TourCard } from '@/components/mdx/TourCard'
+import { GetYourGuideWidget } from '@/components/mdx/GetYourGuideWidget'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -114,7 +115,7 @@ export default function BlogPost({ params }: { params: { lang: string; slug: str
                 <div className="p-6">
                   <p className="text-slate-400 mb-5">{post.description}</p>
                   <div className="prose prose-zinc max-w-none dark:prose-invert">
-                    <MDXContent components={{ Callout, CTA, TourCard }} />
+                    <MDXContent components={{ Callout, CTA, TourCard, GetYourGuideWidget }} />
                   </div>
                 </div>
               </div>
