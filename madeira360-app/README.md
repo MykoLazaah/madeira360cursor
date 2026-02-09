@@ -58,6 +58,15 @@ MDX components available in posts:
 - `<CTA />`
 - `<TourCard />`
 
+### Link behavior
+
+**All external links automatically open in a new tab** (`target="_blank"` with `rel="noopener noreferrer"`).
+
+- External links (starting with `http://`, `https://`, or `//`) → open in new tab
+- Internal links → use Next.js routing (same tab)
+
+This is handled automatically by the `CustomLink` component. No need to add `target="_blank"` manually.
+
 ### Supabase setup
 
 1. Create a Supabase project (free tier is fine).
