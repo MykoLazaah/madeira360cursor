@@ -14,7 +14,8 @@ export async function GET(request: NextRequest) {
   const currentSlug = searchParams.get('slug')
   const currentLang = searchParams.get('lang')
   const targetLang = searchParams.get('targetLang')
-  const pathname = searchParams.get('pathname')
+  const rawPathname = searchParams.get('pathname')
+  const pathname = rawPathname ? decodeURIComponent(rawPathname) : null
 
   if (!currentSlug || !currentLang || !targetLang || !pathname) {
     return NextResponse.json({ error: 'Missing parameters' }, { status: 400 })

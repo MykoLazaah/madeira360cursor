@@ -22,10 +22,22 @@ export function LanguageSwitcher({ lang }: Props) {
     if (currentSlug) {
       Promise.all([
         lang !== 'de'
-          ? fetch(`/api/related-blog?slug=${encodeURIComponent(currentSlug)}&lang=${lang}&targetLang=de&pathname=${encodeURIComponent(pathname)}`).then((res) => res.json()).then((data) => data.path).catch(() => '/de/blog')
+          ? fetch(`/api/related-blog?slug=${encodeURIComponent(currentSlug)}&lang=${lang}&targetLang=de&pathname=${pathname}`)
+              .then((res) => {
+                if (!res.ok) throw new Error('Failed to load related blog (de)')
+                return res.json()
+              })
+              .then((data) => data.path)
+              .catch(() => '/de/blog')
           : Promise.resolve(pathname),
         lang !== 'en'
-          ? fetch(`/api/related-blog?slug=${encodeURIComponent(currentSlug)}&lang=${lang}&targetLang=en&pathname=${encodeURIComponent(pathname)}`).then((res) => res.json()).then((data) => data.path).catch(() => '/en/blog')
+          ? fetch(`/api/related-blog?slug=${encodeURIComponent(currentSlug)}&lang=${lang}&targetLang=en&pathname=${pathname}`)
+              .then((res) => {
+                if (!res.ok) throw new Error('Failed to load related blog (en)')
+                return res.json()
+              })
+              .then((data) => data.path)
+              .catch(() => '/en/blog')
           : Promise.resolve(pathname),
       ]).then(([dePath, enPath]) => {
         setPaths({ de: dePath, en: enPath })
